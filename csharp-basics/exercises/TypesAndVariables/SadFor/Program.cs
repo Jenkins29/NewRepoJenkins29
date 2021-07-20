@@ -20,7 +20,7 @@ namespace SadFor
                     Console.WriteLine(i);
                 }
             }
-            */
+            Console.ReadKey();
         }
     }
 }

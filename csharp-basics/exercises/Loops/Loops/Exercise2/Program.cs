@@ -16,7 +16,7 @@ namespace Exercise2
             */
             for (i = 0; i < n; i++)
             {
-                Console.WriteLine(Pow(i,n));
+              //  Console.WriteLine(Pow(i,n));
             }
 
             Console.ReadKey();

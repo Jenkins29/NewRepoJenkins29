@@ -10,39 +10,37 @@ namespace Casting
     {
         static void Main(string[] args)
         {
-            first();
-            second();
+            First();
+            Second();
             Console.ReadKey();
         }
 
-        static void first()
+        static void First()
         {
             string a = "1";
             int convertedNumber;
             bool isParsable = int.TryParse(a, out convertedNumber);
             int b = 2;
             int c = 3;
-            double d = 4.0;
+            double d = 4;
             float e = 5;
 
             //fixme - should be 15 :|
-            int sum = convertedNumber + b + c + (int)d + (int)e;
-            Console.WriteLine(sum);
+            //int sum = a + b + c + d + e;
+            //Console.WriteLine(sum);
         }
 
-        static void second()
+        static void Second()
         {
-            String a = "1";
-            float convertedNum;
-            bool isFloatNow = float.TryParse(a, out convertedNum);            
+            string a = "1";
             int b = 2;
             int c = 3;
             double d = 4.2;
             float e = 5.3f;
 
             //fixme - should be 15.5 :| 
-            float sum = convertedNum + b + c + (float)d + e;
-            Console.WriteLine(sum);
+            //float sum = a + b + c + d + e;
+            //Console.WriteLine(sum);
         }
     }
 }

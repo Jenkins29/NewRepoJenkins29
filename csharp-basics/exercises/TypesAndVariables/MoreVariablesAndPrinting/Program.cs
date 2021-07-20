@@ -6,7 +6,7 @@ namespace MoreVariablesAndPrinting
     {
         static void Main(string[] args)
         {
-            String name, eyes, teeth, hair;
+            string name, eyes, teeth, hair;
             int age, height, weight;
 
             name = "Zed A. Shaw";

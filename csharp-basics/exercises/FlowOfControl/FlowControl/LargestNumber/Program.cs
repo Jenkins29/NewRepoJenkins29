@@ -17,7 +17,7 @@ namespace LargestNumber
 
             Console.WriteLine("Input the 3rd number: ");
             int.TryParse(Console.ReadLine(), out input3);
-
+        
             /*
             todo - expected output:
             Input the 1st number: 25

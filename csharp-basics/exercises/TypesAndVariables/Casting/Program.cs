@@ -18,6 +18,8 @@ namespace Casting
         static void First()
         {
             string a = "1";
+            int convertedNumber;
+            bool isParsable = int.TryParse(a, out convertedNumber);
             int b = 2;
             int c = 3;
             double d = 4;

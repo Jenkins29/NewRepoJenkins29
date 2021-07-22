@@ -66,6 +66,7 @@ namespace CalculateArea
                 Console.WriteLine("Please enter a valid range: 1, 2, 3, or 4: ");
                 keyboard = Console.ReadKey();
                 userChoice = keyboard.KeyChar;
+                return userChoice;
             }
 
             return userChoice;
@@ -91,21 +92,26 @@ namespace CalculateArea
             decimal width = 0;
 
             // Get input from user
-            var keyboard = Console.ReadKey();
+            Console.WriteLine("Enter length? ");
+            decimal.TryParse(Console.ReadLine(), out length);
 
             // Get length
-            Console.WriteLine("Enter length? ");
+            
             //todo
             //length = keyboard.nextDouble();
+            
 
             // Get width
             Console.WriteLine("Enter width? ");
+            decimal.TryParse(Console.ReadLine(), out width);
+
             //todo
             //width = keyboard.nextDouble();
 
+
             // Display output
             Console.WriteLine("The rectangle's area is "
-                    + Geometry.areaOfTriangle(length, width));
+                    + Geometry.areaOfRectangle(length, width));
         }
 
         public static void calculateTriangleArea()
@@ -118,17 +124,19 @@ namespace CalculateArea
 
             // Get the base
             Console.WriteLine("Enter length of the triangle's base? ");
+            decimal.TryParse(Console.ReadLine(), out ground);
             //todo
             //read key value
 
             // Get the height
             Console.WriteLine("Enter triangle's height? ");
+            decimal.TryParse(Console.ReadLine(), out height);
             //todo
             //read key value
 
             // Display the triangle's area.
             Console.WriteLine("The triangle's area is "
-                    + Geometry.areaOfRectangle(ground, height));
+                    + Geometry.areaOfTriangle(ground, height));
         }
     }
 }

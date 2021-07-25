@@ -23,9 +23,9 @@ namespace RealExercise5
             }
             
             for (int i=0; i<input.Length; i++)
-                {               
-                  switch (input[i])
-                 {
+            {               
+                switch (input[i])
+                {
                    case 'a': case 'b': case 'c':
                     Console.Write(2); break;
                    case 'd': case 'e': case 'f':
@@ -44,8 +44,8 @@ namespace RealExercise5
                     Console.Write(9); break;
                    default:
                     Console.Write('#'); break;
-                 }                 
-                }
+                }                 
+            }
             Console.ReadKey();
         }
     }

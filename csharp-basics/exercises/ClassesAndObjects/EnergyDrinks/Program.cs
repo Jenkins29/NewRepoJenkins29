@@ -11,25 +11,42 @@ namespace EnergyDrinks
         private const int NumberedSurveyed = 12467;
         private const double PurchasedEnergyDrinks = 0.14;
         private const double PreferCitrusDrinks = 0.64;
+        
 
         private static void Main(string[] args)
         {
-            //fixme
-            /*
+            double energyDrinkers = NumberedSurveyed * PurchasedEnergyDrinks;
+            double preferCitrus = energyDrinkers * PreferCitrusDrinks;
+
+
              Console.WriteLine("Total number of people surveyed " + NumberedSurveyed);
-             Console.WriteLine("Approximately " + energyDrinkers + " bought at least one energy drink");
-             Console.WriteLine(preferCitrus + " of those " + "prefer citrus flavored energy drinks.");
-             */
+             Console.WriteLine("Approximately " + energyDrinkers.ToString("0") + " bought at least one energy drink");
+             Console.WriteLine(preferCitrus.ToString("0") + " of those " + "prefer citrus flavored energy drinks.");
+
+            Console.ReadKey();
         }
 
         double CalculateEnergyDrinkers(int numberSurveyed)
         {
-            throw new Exception("Sorry, no code written :(");
+            double energyDringersDbl;
+
+            numberSurveyed = NumberedSurveyed;
+            energyDringersDbl = (double)numberSurveyed * PurchasedEnergyDrinks;
+            int energyDrinkers = int.Parse(energyDringersDbl.ToString());
+
+            return energyDrinkers;
         }
 
         double CalculatePreferCitrus(int numberSurveyed)
         {
-            throw new Exception("Sorry, no code written :(");
+            double preferCitrusDbl;
+
+            double energyDrinkers = CalculateEnergyDrinkers(NumberedSurveyed);
+            preferCitrusDbl = energyDrinkers * PreferCitrusDrinks;
+            int preferCitrus = int.Parse(preferCitrusDbl.ToString());
+
+            return preferCitrus;
+
         }
     }
 }

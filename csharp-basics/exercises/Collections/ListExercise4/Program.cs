@@ -10,7 +10,6 @@ namespace ListExercise4
     {
         private static void Main(string[] args)
         {
-            // Create a list and add some colors to the list
             var colors = new List<string>
             {
                 "Red",
@@ -20,13 +19,18 @@ namespace ListExercise4
                 "Black"
             };
 
-            //fixme
-            //string element = ...;
-            //Console.WriteLine("First element: " + element);
+            colors.Add("Maroon");
+            colors.Add("Crimson");
+            colors.Add("Forest Green");
+            colors.Add("Toxic Waste Green");
 
-            //fixme
-            //element = ...;
-            //Console.WriteLine("Third element: " + element);
+            string element = colors[0];
+            Console.WriteLine("First element: " + element);
+            Console.ReadKey();
+
+            element = colors[2];
+            Console.WriteLine("Third element: " + element);
+            Console.ReadKey();
         }
     }
 }

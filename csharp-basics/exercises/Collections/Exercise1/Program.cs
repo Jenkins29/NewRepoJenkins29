@@ -14,7 +14,6 @@ namespace Exercise1
         {
             string[] array = { "Audi", "BMW", "Honda", "Mercedes", "Volkswagen", "Mercedes", "Tesla" };
 
-            //todo - replace array with an List and print out the results
             List<string> cars = new List <string>{ "Audi", "BMW", "Honda", "Mercedes", "Volkswagen", "Mercedes", "Tesla" };
             foreach (var car in cars)
             {

@@ -11,7 +11,7 @@ namespace FlightPlanner
 {
     class Program
     {
-        private const string Path = @"C:\Users\JL\NewRepoJenkins29\csharp-basics\exercises\Collections\FlightPlanner\Flights.txt";
+        private const string Path = @"../FlightPlanner/Flights.txt";
         public static List<string> FlightsList = new List<string>();
         public static List<string> TempFlightList = new List<string>();
         public static List<string> TempFlightList2 = new List<string>();
@@ -106,7 +106,6 @@ namespace FlightPlanner
                    Console.WriteLine(j + " " + FlightsList[i]);
                    TempFlightList2.Add(FlightsList[i]);
                    j++;
-
                 }
             }
             TempFlightList.Clear();

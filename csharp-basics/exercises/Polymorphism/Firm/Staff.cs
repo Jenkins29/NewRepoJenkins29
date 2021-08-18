@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 
 namespace Firm
 {
@@ -11,7 +12,7 @@ namespace Firm
         //-----------------------------------------------------------------
         public Staff()
         {
-            staffList = new StaffMember[6];
+            staffList = new StaffMember[8];
             staffList[0] = new Executive("Sam", "123 Main Line",
                 "555-0469", "123-45-6789", 2423.07);
             staffList[1] = new Employee("Carla", "456 Off Line",
@@ -26,6 +27,17 @@ namespace Firm
                 "555-7282");
             ((Executive) staffList[0]).AwardBonus(500.00);
             ((Hourly) staffList[3]).AddHours(40);
+
+            staffList[6] = new Commission("Janis Banis", "Somewhere in Riga",
+                "2-88-55687", "356-85-9658",6.25, 20);
+            staffList[7] = new Commission("Edijs Bravo", "Somewhere in LA",
+                "1-800-55687", "356-85-1111", 9.75, 15);
+
+            ((Hourly)staffList[6]).AddHours(35);
+            ((Commission)staffList[6]).AddSales(400);
+
+            ((Hourly)staffList[7]).AddHours(40);
+            ((Commission)staffList[7]).AddSales(950);
         }
 
         //-----------------------------------------------------------------

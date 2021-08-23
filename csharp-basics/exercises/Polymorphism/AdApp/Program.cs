@@ -1,4 +1,5 @@
 ﻿using System;
+using Exercise5AdApp;
 
 namespace AdApp
 {
@@ -11,7 +12,10 @@ namespace AdApp
             c.AddAdvert(new Hoarding(500, 7, 200));
             c.AddAdvert(new NewspaperAd(0, 30, 20));
             c.AddAdvert(new TVAd(50000, 1000, 30, true));
+            c.AddAdvert(new Poster(30, 50, 50, 25, 500));
             Console.WriteLine(c);
+
+            Console.ReadLine();
         }
     }
 }

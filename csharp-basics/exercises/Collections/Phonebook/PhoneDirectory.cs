@@ -1,64 +1,62 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace PhoneBook
 {
     public class PhoneDirectory
     {
-        private PhoneEntry[] _data;
-        private int _dataCount;
+        public string _name;
+        public string _number;
+        public SortedDictionary<string, string> PhoneEntries = new SortedDictionary<string, string>();
 
-        public PhoneDirectory() {
-            _data = new PhoneEntry[1];
-            _dataCount = 0;
-        }
-
-        private int Find(string name) {
-            for (var i = 0; i < _dataCount; i++) 
+        public void FindNumber(string name)
+        {
+            _name = name;
+            for (var i = 0; i < PhoneEntries.Count; i++)
             {
-                if (_data[i].name.Equals(name)) 
+                if (PhoneEntries.ContainsKey(name))
                 {
-                    return i;
+                    Console.WriteLine($"{name}'s phone number is {PhoneEntries.Values.ElementAt(i)}");
+                }
+                else
+                {
+                    Console.WriteLine($"No number with the name {name} was found.");
                 }
             }
-
-            return -1;
         }
 
-        public string GetNumber(string name) 
+        public void FindName(string number)
         {
-            var position = Find(name);
-            if (position == -1) 
+            _number = number;
+            for (var i = 0; i < PhoneEntries.Count; i++)
             {
-                return null;
-            } 
-            else 
-            {
-                return _data[position].number;
-            }
-        }
-
-        public void PutNumber(string name, string number) 
-        {
-            if (name == null || number == null) 
-            {
-                throw new Exception("name and number cannot be null");
-            }
-
-            var i = Find(name);
-            if (i >= 0) 
-            {
-                _data[i].number = number;
-            }
-            else 
-            {
-                if (_dataCount == _data.Length) 
+                if (PhoneEntries.ContainsValue(number))
                 {
-                    Array.Resize(ref _data, (2 * _data.Length));
+                    Console.WriteLine($"The name found under number {number} is: {PhoneEntries.Keys.ElementAt(i)}");
                 }
+                else
+                {
+                    Console.WriteLine($"Number {number} was not found in your directory.");
+                }
+            }
+        }
 
-                var newEntry = new PhoneEntry {name = name, number = number}; // Create a new pair.
-                _data[_dataCount] = newEntry;   // Add the new pair to the array.
-                _dataCount++;
+        public void AddNewNumber(string name, string number)
+        {
+            _name = name;
+            _number = number;
+
+            PhoneEntries.Add(_name, _number);
+        }
+
+        public void PrintContacts()
+        {
+            foreach (KeyValuePair<string, string> entry in PhoneEntries)
+            {
+                Console.WriteLine($"Name: {entry.Key}, number: {entry.Value} ");
             }
         }
     }

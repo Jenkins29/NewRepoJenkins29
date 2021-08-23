@@ -11,16 +11,25 @@ namespace Exercise2
             Console.WriteLine("Input number of terms : ");
 
             n = Convert.ToInt32(Console.ReadLine());
-            /*
-            todo - complete loop to multiply i with itself n times, it is NOT allowed to use Math.Pow()
-            */
-            for (i = 0; i < n; i++)
+            
+            for (i = 1; i < n; i++)
             {
-              //  Console.WriteLine(Pow(i,n));
+              Console.WriteLine(Pow(i,n));
             }
 
             Console.ReadKey();
+        }
 
+        static int Pow(int arg, int arg2)
+        {
+            int result = 1;
+
+            for (int i=0; i<arg2; i++)
+            {
+                result *= arg;
+            }
+
+            return result;                       
         }
     }
 }

@@ -10,21 +10,35 @@ namespace Account
     {
         private static void Main(string[] args)
         {
-            var aAccount = new Account("A account", 100.00);
-            var bAccount = new Account("B account",0);
-            var cAccount = new Account("C Account", 0);
+            Account accountA = new Account("Account A", 100.00);
+            Account accountB = new Account("Account B",0.0);
+            Account accountC = new Account("Account B", 0);
+            Account mattsAccount = new Account("Matt", 1000.00);
+            Account myAccount = new Account("My Account", 0);
+
             Console.WriteLine("Initial state");
-            Console.WriteLine(aAccount);
-            Console.WriteLine(bAccount);
-            Console.WriteLine(cAccount);
-            aAccount.Name = "GGGG";
-            Transfer(aAccount,bAccount, 50.0);
-            Transfer(bAccount,cAccount, 25.0);
+            Console.WriteLine(accountA);
+            Console.WriteLine(accountB);
+            Console.WriteLine(accountC);
+
+            accountA.withdrawal(20);
+            Console.WriteLine($"{accountA.Name}'s account balance is now: " + accountA.balance());
+            accountB.deposit(200);
+            Console.WriteLine($"{accountB.Name}'s account balance is now: " + accountB.balance());
+            accountC.deposit(20);
+            Console.WriteLine($"{accountC.Name}'s account balance is now: " + accountC.balance());
+            mattsAccount.withdrawal(100.0);
+            myAccount.deposit(100.0);
+            Console.WriteLine(mattsAccount);
+            Console.WriteLine(myAccount);
+            
+            Transfer(accountA, accountB, 50.0);
+            Transfer(accountB, accountC, 25.0);
             
             Console.WriteLine("Final state");
-            Console.WriteLine(aAccount);
-            Console.WriteLine(bAccount);
-            Console.WriteLine(cAccount);
+            Console.WriteLine(accountA);
+            Console.WriteLine(accountB);
+            Console.WriteLine(accountC);
 
             Console.ReadKey();
         }

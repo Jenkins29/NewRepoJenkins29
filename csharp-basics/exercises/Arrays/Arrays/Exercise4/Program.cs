@@ -7,8 +7,7 @@ using System.Threading.Tasks;
 namespace Exercise4
 {
     class Program
-    {
-        //TODO: Write a C# program to test if an array contains a specific value.
+    {        
         private static void Main(string[] args)
         {
             int[] myArray =
@@ -17,14 +16,15 @@ namespace Exercise4
                 1458, 2458, 1254, 1472, 2365,
                 1456, 2265, 1457, 2456
             };
+            int input;
 
-            /*
-            fixme - check if contains number 1245 
-            for (?) {
-                ......
-                Console.WriteLine("Contains!");
-            }
-            */
-        }
+            Console.WriteLine("Input the value you'd like to search for:");
+            int.TryParse(Console.ReadLine(), out input);
+
+            if (myArray.Contains(input)) Console.WriteLine("Contains!");
+            else Console.WriteLine($"The array does not contain the number {input}");            
+            
+         Console.ReadKey();
+        }   
     }
 }

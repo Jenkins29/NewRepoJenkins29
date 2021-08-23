@@ -24,12 +24,8 @@ namespace AdApp
             if (_isPeakTime)
             {
                 cost += fee * _peakTime * 2;
-                return cost;
             }
-            else
-            {
-                return cost;
-            }
+            return cost;
         }
 
         public override string ToString() 

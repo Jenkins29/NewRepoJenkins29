@@ -7,6 +7,5 @@ namespace DragRace
     public interface INOBoost
     {
         void UseNitrousOxideEngine();
-
     }
 }

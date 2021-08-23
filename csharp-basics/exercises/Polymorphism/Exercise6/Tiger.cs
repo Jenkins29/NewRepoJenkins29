@@ -20,10 +20,12 @@ namespace Exercise6
         {
             if (food is Vegetable)
             {
-                Console.WriteLine($"A {this._animalType} doesn't eat veggies");
+                Console.WriteLine($"A {this._animalType} doesn't eat veggies, try meat");
             }
-
-            food._quantity = +base._foodEaten;
+            else
+            {
+                _foodEaten += food._quantity;
+            }
         }
     }
 }

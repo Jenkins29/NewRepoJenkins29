@@ -19,7 +19,7 @@ namespace Exercise6
         public override string ToString()
         {
                 return $"Animal: {_animalType}, name: {_animalName}, weight: {_animalWeight}, region: {_livingRegion}, " +
-                       $"breed: {_breed}. And it has eaten {_foodEaten} units of food.";
+                       $"breed: {_breed}, food eaten: {_foodEaten}";
         }
     }
 }

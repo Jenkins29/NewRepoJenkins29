@@ -4,15 +4,15 @@ using System.Text;
 
 namespace Exercise6
 {
-    class Zebra : Mammal
+    class Mouse : Mammal
     {
-        public Zebra(string animalType, string name, double weight, string region) : base(animalType, name, weight, region)
+        public Mouse(string animalType, string name, double weight, string region):base(animalType, name, weight, region)
         {
         }
 
         public override void MakeSound()
         {
-            Console.WriteLine("weirdZebraSounds");
+            Console.WriteLine("peep");
         }
 
         public override void eat(Food food)
@@ -21,8 +21,10 @@ namespace Exercise6
             {
                 Console.WriteLine($"A {this._animalType} doesn't eat meat");
             }
-
-            food._quantity =+ base._foodEaten;
+            else
+            {
+                _foodEaten += food._quantity;
+            }
         }
     }
 }

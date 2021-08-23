@@ -11,7 +11,6 @@ namespace Exercise6
             
             int animalCount = 0;
             List<Animal> animalList = new List<Animal>();
-            Console.WriteLine("get ready");
             Console.ReadLine();
             var input = String.Empty;
 
@@ -50,6 +49,7 @@ namespace Exercise6
         {
             Console.WriteLine("What would you like to feed your new buddy? Input 'vegetable' or 'meat'.");
             var foodType = Console.ReadLine();
+
             Console.WriteLine("And how much?");
             var foodAmt = int.Parse(Console.ReadLine());
 
@@ -66,7 +66,7 @@ namespace Exercise6
 
         public static Animal CreateAnimal()
         {
-            Console.Write("Input the type of animal you'd like to create: ");
+            Console.Write("Input the type of animal you'd like to create (e.g. 'tiger'): ");
             var animalType = Console.ReadLine();
             List<string> animalDetails = new List<string>() { "name", "weight", "region"};
             List<string> animalDetails2 = new List<string>() { "name", "weight", "region", "breed" };

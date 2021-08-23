@@ -7,7 +7,6 @@ namespace DragRace
     class Mitsubishi : ICar
     {
         private int currentSpeed;
-
         public void SpeedUp()
         {
             currentSpeed += 25;

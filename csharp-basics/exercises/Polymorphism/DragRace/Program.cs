@@ -49,7 +49,6 @@ namespace DragRace
                 
                 Console.WriteLine($"Car name: {car.ShowName()}, speed: {car.ShowCurrentSpeed()}");
                 Console.WriteLine("*******************");
-
             }
             Console.ReadKey();
         }

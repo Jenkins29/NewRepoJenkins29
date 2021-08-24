@@ -11,16 +11,13 @@ namespace Exercise2
             Console.WriteLine("Input your number and I'll tell you more about it:");
             int.TryParse(Console.ReadLine(), out number);
 
-            if (number % 2 == 0) Console.WriteLine("This number is even");
-            if (number % 2 != 0) Console.WriteLine("This number is odd");
+            var result = OddOrEven.CheckIfNumberIsOddOrEven(number);
+            var bye = OddOrEven.PrintByeWhenExiting();
+
+            Console.WriteLine(result);
+            Console.WriteLine(bye);
 
             Console.ReadKey();
-            Console.WriteLine("bye!");
-
-            
-
-            
         }
-
     }
 }

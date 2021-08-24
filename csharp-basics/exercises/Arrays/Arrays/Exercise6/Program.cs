@@ -7,33 +7,16 @@ namespace Exercise6
     {
         static void Main(string[] args)
         {
-            Random r = new Random();
-            int[] myArray1 = new int[10];
-            int[] myArray2 = new int[10];
+            var firstArray = ArrayCreation.CreateArray();
 
-            for (int i=0; i<myArray1.Length; i++)
-            {
-               myArray1[i] = r.Next(0,100);
-            }
+            var randomArr = ArrayCreation.FillArrayWith10RandomsInRange1To100(firstArray);
+            var randomArr2 = ArrayCreation.CopyArray(randomArr);
 
-            Array.Copy(myArray1, 0, myArray2, 0, myArray1.Length);
+            ArrayCreation.SetLastValueToMinus7(randomArr);
 
-            myArray1[myArray1.Length - 1] = -7;
+            var result = ArrayCreation.DisplayArrayContents(randomArr, randomArr2);
 
-            Console.Write("Array 1: ");            
-            foreach (int number in myArray1)
-            {
-               Console.Write($"{number} ");
-            }
-            
-            Console.WriteLine();
-
-            Console.Write("Array 2: ");
-            foreach (int number in myArray2)
-            {
-               Console.Write($"{number} ");
-            }
-
+            Console.WriteLine(result);
             Console.ReadKey();
         }
     }

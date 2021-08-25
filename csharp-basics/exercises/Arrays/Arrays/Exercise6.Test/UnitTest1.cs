@@ -6,9 +6,8 @@ namespace Exercise6.Test
 {
     public class UnitTest1
     {
-        
         [Fact]
-        public void Create_ShouldCreateAnArrayOfSize10()
+        public void CreateArray_ShouldCreateAnArrayOfSize10()
         {
             // Arrange
             int [] array = new int[10];
@@ -21,7 +20,7 @@ namespace Exercise6.Test
         }
 
         [Fact]
-        public void Check_ArrayShouldContain10RandomIntegersInRange0To100()
+        public void FillArrayWith10RandomsInRange1To100_ArrayShouldContain10RandomIntegersInRange1To100()
         {
             // Arrange
             int[] array = new int[10];
@@ -41,12 +40,10 @@ namespace Exercise6.Test
             {
                 Assert.InRange(i, 0, 100);
             }
-            
         }
 
         [Fact]
-
-        public void Check_ArrayShouldBeCopied()
+        public void CopyArray_InputArray_ShouldCreateCopyOfInputArray()
         {
             // Arrange
             int[] array = new int[10];
@@ -59,7 +56,7 @@ namespace Exercise6.Test
         }
 
         [Fact]
-        public void Check_ArrayLastValueShouldBe7()
+        public void SetLastValueToMinus7_InputArray_ArrayLastValueShouldBeSetTo7()
         {
             // Arrange
             int[] array = new int[] {1,2,3,4,5,6,7,8,9,10};
@@ -72,7 +69,7 @@ namespace Exercise6.Test
         }
 
         [Fact]
-        public void Check_ShouldReturn2Strings()
+        public void DisplayArrayContents_InputTwoArrays_ShouldReturnBothArrayContentsAsStrings()
         {
             // Arrange
             var array = ArrayCreation.CreateArray();

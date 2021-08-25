@@ -7,7 +7,7 @@ namespace Arithmetic.Test.Exercise2
     public class Exercise2Test
     {
         [Fact]
-        public void CheckNumber_Input15_ReturnsOddNumber()
+        public void CheckIfNumberIsOddOrEven_Input15_ShouldReturnOddNumber()
         {
             // Arrange
             string expected = "Odd Number";
@@ -20,7 +20,7 @@ namespace Arithmetic.Test.Exercise2
         }
 
         [Fact]
-        public void CheckNumber_Input15_ReturnsEvenNumber()
+        public void CheckIfNumberIsOddOrEven_Input16_ShouldReturnEvenNumber()
         {
             // Arrange
             string expected = "Even Number";
@@ -33,7 +33,7 @@ namespace Arithmetic.Test.Exercise2
         }
 
         [Fact]
-        public void ShouldPrintBye()
+        public void PrintByeWhenExiting_NoInput_ShouldReturnBye()
         {
             // Arrange
             string expected = "bye!";

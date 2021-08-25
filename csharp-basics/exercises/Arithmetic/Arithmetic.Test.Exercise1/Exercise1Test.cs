@@ -7,7 +7,7 @@ namespace Arithmetic.Test.Exercise1
     public class Exercise1Test
     {
         [Fact]
-        public void Check_ShouldReturnTrueIfEitherNumIs15()
+        public void CheckIfNumberIs15_Input15And24_ShouldReturnTrue()
         {
             // Arrange
             bool expected = true;
@@ -20,7 +20,7 @@ namespace Arithmetic.Test.Exercise1
         }
 
         [Fact]
-        public void Check_ShouldReturnFalseIfNeitherNumIs15()
+        public void CheckIfNumberIs15_Input16And24_ShouldReturnFalse()
         {
             // Arrange
             bool expected = false;
@@ -33,7 +33,7 @@ namespace Arithmetic.Test.Exercise1
         }
 
         [Fact]
-        public void Check_ShouldReturnTrueIfSumIs15()
+        public void CheckIfNumberSumIs15_Input7And8_ShouldReturnTrue()
         {
             // Arrange
             bool expected = true;
@@ -46,7 +46,7 @@ namespace Arithmetic.Test.Exercise1
         }
 
         [Fact]
-        public void Check_ShouldReturnFalseIfSumIsNot15()
+        public void CheckIfNumberSumIs15_Input9And8_ShouldReturnFalse()
         {
             // Arrange
             bool expected = false;
@@ -59,7 +59,7 @@ namespace Arithmetic.Test.Exercise1
         }
 
         [Fact]
-        public void Check_ShouldReturnTrueIfDifferenceIs15()
+        public void CheckIfNumberDifferenceIs15_Input31And16_ShouldReturnTrue()
         {
             // Arrange
             bool expected = true;
@@ -72,7 +72,7 @@ namespace Arithmetic.Test.Exercise1
         }
 
         [Fact]
-        public void Check_ShouldReturnFalseIfDifferenceIsNot15()
+        public void CheckIfNumberDifferenceIs15_Input32And19_ShouldReturnFalse()
         {
             // Arrange
             bool expected = false;

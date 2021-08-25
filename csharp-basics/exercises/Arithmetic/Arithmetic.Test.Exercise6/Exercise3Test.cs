@@ -7,7 +7,7 @@ namespace Arithmetic.Test.Exercise6
     public class Exercise3Test
     {
         [Fact]
-        public void CheckOutputString_ShouldReturnCozaLozaWoza()
+        public void PrintCozaLozaWoza_NoInput_ShouldReturnCozaLozaWoza()
         {
             // Arrange
             var expected = "1 2 Coza 4 Loza Coza Woza 8 Coza Loza 11 " + "\n" +

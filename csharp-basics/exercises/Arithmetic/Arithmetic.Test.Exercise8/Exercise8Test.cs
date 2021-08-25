@@ -13,7 +13,7 @@ namespace Arithmetic.Test.Exercise8
         [InlineData(12.00, 60, "Employee4", "Employee4's salary is 840,00")]
         [InlineData(9.47, 40, "Employee5", "Employee5's salary is 378,80")]
         [InlineData(8.40, 35, "Employee6", "Employee6's salary is 294,00")]
-        public void CalculateWage_ShouldReturnWageOrError
+        public void CalculateWage_ShouldReturnStringWithWageOrError
             (double basePay, int hours, string name, string expected)
         {
             // Act

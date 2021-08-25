@@ -7,7 +7,7 @@ namespace Arithmetic.Test.Exercise7
     public class Exercise7Test
     {
         [Fact]
-        public void CalculatePositionAfter10SecFallTime_NoInput_ReturnsMinus490pt5()
+        public void CalculatePositionAfter10SecFallTime_NoInput_ShouldReturnMinus490pt5()
         {
             // Arrange
             var expected = -490.5;

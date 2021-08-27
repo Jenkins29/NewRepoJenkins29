@@ -5,7 +5,6 @@ using System.Text;
 namespace DragRace
 {
     public interface INOBoost
-    {
-        void UseNitrousOxideEngine();
+    { void UseNitrousOxideEngine();
     }
 }

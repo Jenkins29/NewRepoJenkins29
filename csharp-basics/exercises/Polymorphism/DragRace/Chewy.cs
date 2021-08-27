@@ -4,10 +4,19 @@ using System.Text;
 
 namespace DragRace
 {
-    class Chewy : ICar
+    public class Chewy : ICar
     {
-        private int currentSpeed;
+        private static int currentSpeed;
+        public int Speed
+        {
+            get => currentSpeed;
+            set => currentSpeed = value;
+        }
         public static string name = "Chewy";
+
+        public Chewy()
+        {
+        }
 
         public void SpeedUp()
         {
@@ -24,9 +33,10 @@ namespace DragRace
             return currentSpeed.ToString();
         }
 
-        public void StartEngine()
+        public string StartEngine()
         {
-            Console.WriteLine("..achooo...");
+            //Console.WriteLine("..achooo...");
+            return "..achooo...";
         }
 
         public string ShowName()

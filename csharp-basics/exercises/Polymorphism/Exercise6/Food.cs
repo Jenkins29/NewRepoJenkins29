@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Exercise6
 {
-    abstract class Food
+    public abstract class Food
     {
         public int _quantity;
         protected Food(int quantity)

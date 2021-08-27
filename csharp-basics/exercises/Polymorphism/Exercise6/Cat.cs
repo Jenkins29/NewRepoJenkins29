@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Exercise6
 {
-    class Cat : Feline
+    public class Cat : Feline
     {
         public string _breed;
         public Cat(string animalType, string name, double weight, string region, string breed) : base(animalType, name, weight, region)
@@ -12,9 +12,10 @@ namespace Exercise6
             _breed = breed;
         }
 
-        public override void MakeSound()
+        public override string MakeSound()
         {
-            Console.WriteLine("meow");
+            //Console.WriteLine("meow");
+            return "meow";
         }
         public override string ToString()
         {

@@ -4,12 +4,12 @@ using System.Text;
 
 namespace Exercise6
 {
-    abstract class Animal
+    public abstract class Animal
     {
         public string _animalName;
         public string _animalType;
         public double _animalWeight;
-        public int _foodEaten;
+        public int _foodEaten { get; set; }
 
         protected Animal(string animalType, string name, double weight)
         {
@@ -23,9 +23,10 @@ namespace Exercise6
             _foodEaten += food._quantity;
         }
 
-        public virtual void MakeSound()
+        public virtual string MakeSound()
         {
-            Console.WriteLine("Animal sounds....");
+            //Console.WriteLine("Animal sounds....");
+            return "Animal sounds....";
         }
 
         public override string ToString()

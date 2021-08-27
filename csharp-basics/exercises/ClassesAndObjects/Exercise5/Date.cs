@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Exercise5
 {
-    class Date
+    public class Date
     {
         public int Day
         { get; set; }
@@ -15,14 +15,17 @@ namespace Exercise5
         public int Year
         { get; set; }
 
-        public Date()
+        public Date(int day, int month, int year)
         {
-
+            this.Day = day;
+            this.Month = month;
+            this.Year = year;
         }
 
-        public void DisplayDate()
+        public string DisplayDate()
         {
-            Console.Write($"{Day}/{Month}/{Year}");
+            //Console.Write($"{Day}/{Month}/{Year}");
+            return $"{Day}/{Month}/{Year}";
         }
     }
 }

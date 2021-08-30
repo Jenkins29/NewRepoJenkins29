@@ -11,7 +11,7 @@ namespace ClassesAndObjects.Exercise12.Test
         [InlineData(10000.00, 2500.00, 7500.00)]
         [InlineData(55555.19, 30497.44, 25057.75)]
         [InlineData(4987.77, 5000.00, -12.23)]
-        public void Withdrawal_Test(decimal money, decimal amountWithdrawn, decimal balance)
+        public void Withdrawal_ShouldReturnNewBalanceMinusWithdrawnAmt(decimal money, decimal amountWithdrawn, decimal balance)
         {
             //arrange
             var expectedAccount = new Account.Account("Janis Bajanis", money);
@@ -45,7 +45,7 @@ namespace ClassesAndObjects.Exercise12.Test
         [InlineData(10000.00, 33771.11, 43771.11)]
         [InlineData(55555.19, 30497.44, 86052.63)]
         [InlineData(-4987.77, 5000.00, 12.23)]
-        public void Deposit_Test(decimal money, decimal amountDeposited, decimal balance)
+        public void Deposit_ShouldReturnBalancePlusDepositedAmt(decimal money, decimal amountDeposited, decimal balance)
         {
             //arrange
             var expectedAccount = new Account.Account("Thomas Anderson", money);
@@ -78,7 +78,7 @@ namespace ClassesAndObjects.Exercise12.Test
         [InlineData(10000.00, 10000.00)]
         [InlineData(55555.19, 55555.19)]
         [InlineData(-4987.77, -4987.77)]
-        public void Balance_Test(decimal money, decimal expected)
+        public void Balance_ShouldReturnBalance(decimal money, decimal expected)
         {
             //arrange
             var morpheus = new Account.Account("Morpheus", money);
@@ -95,7 +95,7 @@ namespace ClassesAndObjects.Exercise12.Test
         [InlineData("Trinity", 458489854.00, "Trinity: 458489854,00")]
         [InlineData("Agent Smith", 999999999999.99, "Agent Smith: 999999999999,99")]
         [InlineData("Cypher", 0.00, "Cypher: 0,00")]
-        public void ToString_Test(string name, decimal money, string expected)
+        public void ToString_ShouldReturnNameAndBalanceAsString(string name, decimal money, string expected)
         {
             //arrange
             var matrix = new Account.Account(name, money);
@@ -111,7 +111,7 @@ namespace ClassesAndObjects.Exercise12.Test
         [InlineData("Morpheus", 1000.00, 475.66, 524.34, "Naiobe", 750.00, 1225.66)]
         [InlineData("Trinity", 47000.37, 336.37, 46664.00, "Neo", 15000.00, 15336.37)]
         [InlineData("Tank", 16777.66, 475.66, 16302.00, "Dozer", 17547.77, 18023.43)]
-        public void Transfer_Test(string name, decimal startingBalance, decimal amountTransferred, decimal expectedBalanceSender, 
+        public void Transfer_ShouldSubtractTransferredAmtFromSenderAndAddAmtToReceiver(string name, decimal startingBalance, decimal amountTransferred, decimal expectedBalanceSender, 
             string recipient, decimal startingBalanceRecipient, decimal expectedBalanceRecipient)
         {
             //arrange

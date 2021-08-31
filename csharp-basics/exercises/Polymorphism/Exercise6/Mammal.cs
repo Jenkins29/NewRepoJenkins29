@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Exercise6
 {
-    abstract class Mammal : Animal
+    public abstract class Mammal : Animal
     {
         public string _livingRegion;
 

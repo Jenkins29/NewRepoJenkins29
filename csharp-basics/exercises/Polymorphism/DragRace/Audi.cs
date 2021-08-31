@@ -4,8 +4,18 @@ namespace DragRace
 {
     public class Audi : ICar
     {
-        private int currentSpeed = 0;
+        private static int currentSpeed = 0;
+        public int Speed
+        {
+            get => currentSpeed;
+            set => currentSpeed = value;
+        }
+
         public static string name = "Audi";
+
+        public Audi()
+        {
+        }
 
         public void SpeedUp()
         {
@@ -22,9 +32,10 @@ namespace DragRace
             return currentSpeed.ToString();
         }
 
-        public void StartEngine() 
+        public string StartEngine() 
         {
-            Console.WriteLine("Rrrrrrr.....");
+            //Console.WriteLine("Rrrrrrr.....");
+            return "Rrrrrrr.....";
         }
 
         public string ShowName()

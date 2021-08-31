@@ -4,15 +4,16 @@ using System.Text;
 
 namespace Exercise6
 {
-    class Zebra : Mammal
+    public class Zebra : Mammal
     {
         public Zebra(string animalType, string name, double weight, string region) : base(animalType, name, weight, region)
         {
         }
 
-        public override void MakeSound()
+        public override string MakeSound()
         {
-            Console.WriteLine("weirdZebraSounds");
+            //Console.WriteLine("weirdZebraSounds");
+            return "weirdZebraSounds";
         }
 
         public override void eat(Food food)
@@ -20,6 +21,7 @@ namespace Exercise6
             if (food is Meat)
             {
                 Console.WriteLine($"A {this._animalType} doesn't eat meat");
+                throw new ArgumentException(message: $"A {this._animalType} doesn't eat meat");
             }
             else
             {

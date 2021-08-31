@@ -6,7 +6,7 @@ namespace Exercise5
     {
         static void Main(string[] args)
         {
-            Date today = new Date();
+            Date today = new Date(1, 3, 2020);
 
             today.Day = 2;
             today.Month = 8;
@@ -16,7 +16,6 @@ namespace Exercise5
             today.DisplayDate();
 
             Console.ReadKey();
-            
         }
     }
 }

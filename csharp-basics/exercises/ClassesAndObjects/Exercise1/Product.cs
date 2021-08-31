@@ -4,11 +4,23 @@ using System.Text;
 
 namespace Exercise1
 {
-    class Product
+    public class Product
     {
         private string _name;
+        public string Name
+        {
+            get { return this._name; }
+        }
         private double _price;
+        public double Price
+        {
+            get { return this._price; }
+        }
         private int _amount;
+        public int Amount
+        {
+            get { return this._amount; }
+        }
 
         public Product(string name, double priceAtStart, int amountAtStart)
         {
@@ -17,9 +29,10 @@ namespace Exercise1
             _amount = amountAtStart;
         }
 
-        public void PrintProduct()
+        public string PrintProduct()
         {
-            Console.WriteLine($"{_name}, price {_price.ToString("0.00")} EUR, amount {_amount}");
+            //Console.WriteLine($"{_name}, price {_price.ToString("0.00")} EUR, amount {_amount}");
+            return $"{_name}, price {_price.ToString("0.00")} EUR, amount {_amount}";
         }
 
         public void AddOrRemoveQuantity(int addAmount)

@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Data.SqlTypes;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,56 +9,63 @@ namespace PhoneBook
 {
     public class PhoneDirectory
     {
-        public string _name;
-        public string _number;
+        public static string Name;
+        public static string Number;
         public SortedDictionary<string, string> PhoneEntries = new SortedDictionary<string, string>();
-
-        public void FindNumber(string name)
+        public string FindNumber(string name)
         {
-            _name = name;
+            string result = string.Empty;
+            Name = name;
+
             for (var i = 0; i < PhoneEntries.Count; i++)
             {
                 if (PhoneEntries.ContainsKey(name))
                 {
-                    Console.WriteLine($"{name}'s phone number is {PhoneEntries.Values.ElementAt(i)}");
+                    var number = PhoneEntries[name];
+                    result = $"{name}'s phone number is {number}.";
                 }
-                else
-                {
-                    Console.WriteLine($"No number with the name {name} was found.");
-                }
+                else result = $"No number with the name {name} was found.";
             }
+            return result;
         }
 
-        public void FindName(string number)
+        public string FindName(string number)
         {
-            _number = number;
+            string result = string.Empty;
+            Number = number;
+            string name = string.Empty;
+
             for (var i = 0; i < PhoneEntries.Count; i++)
             {
                 if (PhoneEntries.ContainsValue(number))
                 {
-                    Console.WriteLine($"The name found under number {number} is: {PhoneEntries.Keys.ElementAt(i)}");
+                    name = PhoneEntries.FirstOrDefault(x => x.Value == number).Key;
+                    result = $"The name found under number {number} is: {name}";
                 }
                 else
                 {
-                    Console.WriteLine($"Number {number} was not found in your directory.");
+                    result = $"Number {number} was not found in your directory.";
                 }
             }
+            return result;
         }
 
         public void AddNewNumber(string name, string number)
         {
-            _name = name;
-            _number = number;
-
-            PhoneEntries.Add(_name, _number);
+            Name = name;
+            Number = number;
+            PhoneEntries.Add(Name, Number);
         }
 
-        public void PrintContacts()
+        public string PrintContacts()
         {
+            string result = string.Empty;
+
             foreach (KeyValuePair<string, string> entry in PhoneEntries)
             {
-                Console.WriteLine($"Name: {entry.Key}, number: {entry.Value} ");
+                result += $"Name: {entry.Key}, number: {entry.Value} " + "\n";
             }
+            return result;
         }
     }
 }

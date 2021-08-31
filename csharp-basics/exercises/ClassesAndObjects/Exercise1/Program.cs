@@ -14,9 +14,11 @@ namespace Exercise1
             iPhone.ChangePrice(499.59);
             Epson.AddOrRemoveQuantity(9);
 
-            LogitechMouse.PrintProduct();
-            iPhone.PrintProduct();
-            Epson.PrintProduct();
+            Console.WriteLine(LogitechMouse.PrintProduct());
+            Console.WriteLine(iPhone.PrintProduct());
+            Console.WriteLine(Epson.PrintProduct());
+            
+            
         }        
     }
 }
